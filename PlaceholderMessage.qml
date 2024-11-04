@@ -25,8 +25,8 @@ ColumnLayout {
     // Smaller explanatory text below the larger title-style text
     property string explanation
 
-    property var fontMetrics: TextMetrics{text:'M'}
-    spacing: fontMetrics.height
+    Units { id: units }
+    spacing: units.largeSpacing
 
     Heading {
 	    text: root.text
