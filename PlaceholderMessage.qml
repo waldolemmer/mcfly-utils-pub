@@ -25,6 +25,9 @@ ColumnLayout {
     // Smaller explanatory text below the larger title-style text
     property string explanation
 
+    property alias wrapMode: label.wrapMode
+    property alias textFormat: label.textFormat
+
     Units { id: units }
     spacing: units.largeSpacing
 
@@ -48,7 +51,6 @@ ColumnLayout {
 	    opacity: 0.65
 
 	    wrapMode: Text.WordWrap
-	    textFormat: Text.RichText
 
 	    Layout.fillWidth: true
     }
