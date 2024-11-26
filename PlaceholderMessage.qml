@@ -36,9 +36,7 @@ ColumnLayout {
 	    visible: text.length > 0
 	    opacity: 0.65
 
-	    Layout.fillWidth: true
-	    horizontalAlignment: Qt.AlignHCenter
-	    verticalAlignment: Qt.AlignVCenter
+	    Layout.alignment: Qt.AlignCenter
 
 	    wrapMode: Text.WordWrap
     }
@@ -52,6 +50,16 @@ ColumnLayout {
 
 	    wrapMode: Text.WordWrap
 
+	    Layout.maximumWidth: dummy.implicitWidth
+	    Layout.alignment: Qt.AlignCenter
 	    Layout.fillWidth: true
+
+	    Label {
+		    id: dummy
+		    text: parent.text
+		    visible: false
+		    textFormat: parent.textFormat
+		    wrapMode: Text.NoWrap
+	    }
     }
 }
